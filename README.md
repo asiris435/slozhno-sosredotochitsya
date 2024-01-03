@@ -1,5 +1,5 @@
 # __Slozhno-sosredotochitsya__
-https://asiris435.github.io/russian-travel/
+https://asiris435.github.io/slozhno-sosredotochitsya/
 >## Цель проекта Slozhno-sosredotochitsya: 
 >#### _Рассказать о способах сохранения концентрации._   
 
