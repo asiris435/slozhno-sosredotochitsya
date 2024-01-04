@@ -28,6 +28,7 @@
   .header {
     padding: 20px;
   }
+}
 
 .decorated-zone::after {
   content: "";
@@ -101,7 +102,7 @@
 @media screen and (width >= 768px) {
   .header__decorative-element::before {
     inset-block-start: 20px;
-  inset-inline-end: 47px;
+    inset-inline-end: 47px;
   }
 }
 
