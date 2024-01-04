@@ -13,13 +13,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 23.4px;
-  padding: 10px;
-}
-
-@media screen and (width >= 768px) {
-  .page {
-    padding: 20px;
-  }
 }
 
 .header {
@@ -28,28 +21,48 @@
   min-block-size: 648px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
+  padding: 10px;
 }
+
+@media screen and (width >= 768px) {
+  .header {
+    padding: 20px;
+  }
 
 .decorated-zone::after {
   content: "";
   position: absolute;
-  inset-block-start: 0px;
-  inset-inline-end: 0px;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
   inline-size: 25px;
   block-size: 25px;
   border-block-start: 1px solid var(--border-color);
   border-inline-end: 1px solid var(--border-color);
 }
 
+@media screen and (width >= 768px) {
+  .decorated-zone::after {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+}
+
 .decorated-zone::before {
   content: "";
   position: absolute;
-  inset-block-end: 0px;
-  inset-inline-start: 0px;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
   inline-size: 25px;
   block-size: 25px;
   border-block-end: 1px solid var(--border-color);
   border-inline-start: 1px solid var(--border-color);
+}
+
+@media screen and (width >= 768px) {
+  .decorated-zone::before {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
 }
 
 .header__decorative-element {
@@ -59,13 +72,20 @@
 .header__decorative-element::after {
   content: "";
   position: absolute;
-  inset-block-start: 8px;
-  inset-inline-end: 8px;
+  inset-block-start: 18px;
+  inset-inline-end: 18px;
   inline-size: 9px;
   block-size: 9px;
   border-radius: 100%;
   background-color: var(--accent-color);
   filter: drop-shadow(0px 0px 4px #ff0070);
+}
+
+@media screen and (width >= 768px) {
+  .header__decorative-element::after {
+    inset-block-start: 28px;
+    inset-inline-end: 28px;
+  }
 }
 
 .header__decorative-element::before {
@@ -74,8 +94,15 @@
   block-size: 26px;
   color: var(--accent-color);
   position: absolute;
-  inset-block-start: 0px;
-  inset-inline-end: 27px;
+  inset-block-start: 10px;
+  inset-inline-end: 37px;
+}
+
+@media screen and (width >= 768px) {
+  .header__decorative-element::before {
+    inset-block-start: 20px;
+  inset-inline-end: 47px;
+  }
 }
 
 .header__theme-menu {
@@ -94,7 +121,6 @@
   display: grid;
   grid-template-rows: repeat(3, 26px);
   gap: 10px;
-  align-items: center;
   justify-items: center;
 }
 
@@ -110,8 +136,9 @@
   text-transform: lowercase;
   background-color: transparent;
   border: none;
-  padding: 0 12px;
+  padding: 0 12px 4px;
   cursor: pointer;
+  max-block-size: 26px;
 }
 
 .header__theme-menu-button:hover {
@@ -180,13 +207,13 @@
 .content {
   display: grid;
   gap: 50px;
-  padding: 50px 0;
+  padding: 40px 10px;
 }
 
 @media screen and (width >= 768px) {
   .content {
     gap: 80px;
-    padding: 80px 0;
+    padding: 60px 20px;
   }
 }
 
@@ -279,6 +306,11 @@
   .content__section-gallery {
     gap: 20px;
   }
+}
+
+.content__section-images {
+  display: grid;
+  gap: 10px;
 }
 
 @media screen and (768px <= width < 1024px) {
